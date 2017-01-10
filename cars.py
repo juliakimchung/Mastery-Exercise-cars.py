@@ -65,13 +65,24 @@ print(make[6][1] + " is available in " + make[6][2] + ", " + make[7][2] + ", " +
 d = { make[1]:  {model[1]: [color[1] for available_color in available_car_colors if available_color[0] == model[0] for color in colors   if available_color[1] == color[0]] for model in models if make[0] == model[2] }  for make in makes  }
 print(d)
 
+for maker, value in d.items():
+    print("\n" + "{:-^44s}".format(maker))
+    for model, color in d[maker].items():
+         print(model + " is available in " + color[len(color)-2] + ", "+ color[len(color)-1] + ", " + color[len(color)-len(color)])
+
+# makes = {make, model for (make, model) in d.items() model, color for model, color in d[maker].items()}
+# print(makes)
 
 
-Toyota = {}
-Toyota["Prius"] = ["Charcoal", "Brick", "Ivory"]
-Toyota["Camry"] = ["Black", "Red", "White"]
-print(Toyota)
-print({k + " is available in " + v[0] + "," + v[1] + "," + v[2] for (k,v) in Toyota.items()})
+# cars = {maker, value for (maker, value) in maker.items() for model, color in maker[model].items()}
+# print(model + " is available in " + color[len(color) -2] + ", " + color[len(color)-1] + ", " + color[0])
+
+
+# Toyota = {}
+# Toyota["Prius"] = ["Charcoal", "Brick", "Ivory"]
+# Toyota["Camry"] = ["Black", "Red", "White"]
+# print(Toyota)
+# print({k + " is available in " + v[0] + "," + v[1] + "," + v[2] for (k,v) in Toyota.items()})
 
 
 
@@ -116,9 +127,6 @@ print({k + " is available in " + v[0] + "," + v[1] + "," + v[2] for (k,v) in Toy
 #             }
 # }
 
-# for maker, value in cars.items():
-#     for model, color in cars[maker].items():
-#         print(model + " is available in " + color[len(color)-2] + ", "+ color[len(color)-1] + ", " + color[len(color)-len(color)] + ".")
 
 # car_color_availability = []
 # for key, value in cars.items():
