@@ -37,6 +37,7 @@ available_car_colors = (
   (14, 2), (14, 5), (14, 8), 
   (15, 1), (15, 4), (15, 7)
 )
+
 for make in makes:
     for model in models:
         if make[0] == model[2]:
@@ -46,7 +47,8 @@ for make in makes:
                 if available_color[0] == model[0]:
                     for color in colors:
                         if available_color[1] == color[0]:
-                            print( "".join(color[1])  )
+                            print(color[1], sep=" ", end=" ", flush=True )
+                            
 
 
 
