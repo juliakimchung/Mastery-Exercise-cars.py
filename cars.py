@@ -72,8 +72,9 @@ for maker, value in d.items():
     for model, color in d[maker].items():
          print(model + " is available in " + color[len(color)-2] + ", "+ color[len(color)-1] + ", " + color[len(color)-len(color)])
 
-# makes = {maker, value for maker, value in d.items() model, color for model, color in d[maker].items()}
-# print(makes)
+makes = {maker: value for (maker, value) in d.items()} 
+print(makes)
+
 
 
 # cars = {maker, value for (maker, value) in maker.items() for model, color in maker[model].items()}
