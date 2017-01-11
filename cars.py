@@ -52,15 +52,15 @@ for make in makes:
 
 
 
-make = [(make[1], model[1], color[1] ) for make in makes for model in models for available_color in available_car_colors for color in colors if make[0] == model[2] if available_color[0]== model[0] if available_color[1] == color[0]]
-print(make)
+# make = [(make[1], model[1], color[1] ) for make in makes for model in models for available_color in available_car_colors for color in colors if make[0] == model[2] if available_color[0]== model[0] if available_color[1] == color[0]]
+# print(make)
 
-print("\n" + "{:-^44s}".format(make[0][0]))
-print(make[0][1] + " is avaialble in " + make[0][2] + ", " + make[1][2] + ", " + make[2][2])
+# print("\n" + "{:-^44s}".format(make[0][0]))
+# print(make[0][1] + " is avaialble in " + make[0][2] + ", " + make[1][2] + ", " + make[2][2])
 
-print(make[3][1] + " is available in " + make[3][2] + ", " + make[4][2] + ", " + make[5][2])
+# print(make[3][1] + " is available in " + make[3][2] + ", " + make[4][2] + ", " + make[5][2])
 
-print(make[6][1] + " is available in " + make[6][2] + ", " + make[7][2] + ", " + make[8][2])
+# print(make[6][1] + " is available in " + make[6][2] + ", " + make[7][2] + ", " + make[8][2])
 
 
 
@@ -72,7 +72,7 @@ for maker, value in d.items():
     for model, color in d[maker].items():
          print(model + " is available in " + color[len(color)-2] + ", "+ color[len(color)-1] + ", " + color[len(color)-len(color)])
 
-# makes = {make, model for (make, model) in d.items() model, color for model, color in d[maker].items()}
+# makes = {maker, value for maker, value in d.items() model, color for model, color in d[maker].items()}
 # print(makes)
 
 
@@ -96,8 +96,6 @@ for maker, value in d.items():
 # print(model)
 # print(color)
 
-# makes = {'make': {'model': ['color']} for 'model', 'color' in 'make'['model'].items()}
-# print(makes)
 
 # cars = {
 #         'Toyota' : {
